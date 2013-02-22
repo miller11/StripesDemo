@@ -1,0 +1,662 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006cff9fb5, pid=6868, tid=5540
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0xa9fb5]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000057a7800):  VMThread [stack: 0x0000000005d80000,0x0000000005e80000] [id=5540]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000c7dd7b80
+
+Registers:
+RAX=0x00000000c7dd7b80, RBX=0x00000000c7dd7b80, RCX=0x0000000000000000, RDX=0x00000000e9b8b020
+RSP=0x0000000005e7eef0, RBP=0x0000000000000000, RSI=0x00000000ce04c638, RDI=0x00000000e9b8b070
+R8 =0x0000000000000005, R9 =0x000000000000000c, R10=0x0000000000000000, R11=0x00000000cffca7b0
+R12=0x00000000ce04c640, R13=0x00000000e9b8b020, R14=0x0000000001dd3fb0, R15=0x0000000000000012
+RIP=0x000000006cff9fb5, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x0000000005e7eef0)
+0x0000000005e7eef0:   0000000000000003 00000000e7dd7bdc
+0x0000000005e7ef00:   00000000e9b8ae80 000000006cff9fe2
+0x0000000005e7ef10:   0000000000000000 000000006d0132ca
+0x0000000005e7ef20:   0000000000000003 00000000e9b8b03c
+0x0000000005e7ef30:   00000000e9b8b01c 000000006d03525c
+0x0000000005e7ef40:   0000000000000003 0000000001c7ef60
+0x0000000005e7ef50:   0000000001dd3600 0000000001dd3690
+0x0000000005e7ef60:   00000000e9b8b020 000000006d14bafa
+0x0000000005e7ef70:   00000000e9b8aea8 0000000000000000
+0x0000000005e7ef80:   000000000816e040 000000000816e040
+0x0000000005e7ef90:   000000006d581c60 000000006d284893
+0x0000000005e7efa0:   0000000001dd3690 0000000000000000
+0x0000000005e7efb0:   0000000005e7f130 000000006d581c60
+0x0000000005e7efc0:   0000000001dcfde0 000000006d28fe7e
+0x0000000005e7efd0:   000000006d42ca90 00000000002f1100
+0x0000000005e7efe0:   000000006d581c60 0000000000000001 
+
+Instructions: (pc=0x000000006cff9fb5)
+0x000000006cff9f95:   01 85 c0 0f 84 92 00 00 00 8b 0d 84 f1 56 00 48
+0x000000006cff9fa5:   89 5c 24 38 8b d8 48 d3 e3 48 03 1d 6b f1 56 00
+0x000000006cff9fb5:   48 8b 03 24 03 3c 03 74 6d 48 89 7c 24 20 48 8b
+0x000000006cff9fc5:   3b 48 c7 44 24 30 03 00 00 00 48 8b 44 24 30 48 
+
+
+Register to memory mapping:
+
+RAX=0x00000000c7dd7b80 is an unknown value
+RBX=0x00000000c7dd7b80 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00000000e9b8b020 is an oop
+java.lang.reflect.Method 
+ - klass: 'java/lang/reflect/Method'
+RSP=0x0000000005e7eef0 is an unknown value
+RBP=0x0000000000000000 is an unknown value
+RSI=0x00000000ce04c638 is an oop
+{instance class} 
+ - klass: {other class}
+RDI=0x00000000e9b8b070 is an oop
+java.lang.String 
+ - klass: 'java/lang/String'
+R8 =0x0000000000000005 is an unknown value
+R9 =0x000000000000000c is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x00000000cffca7b0 is an oop
+{instance class} 
+ - klass: {other class}
+R12=0x00000000ce04c640 is an oop
+{constant pool} 
+ - klass: {other class}
+ - holder: 0x00000000ce04f3a8
+ - cache: 0x00000000ce14b078
+ -   1 :  : " " {0xe746cbe8}
+ -   2 :  : " throws " {0xe76086a8}
+ -   3 :  : "(" {0xe75c1c70}
+ -   4 :  : ")" {0xe75c1c38}
+ -   5 :  : "," {0xe75d0da8}
+ -   6 :  : "..." {0xe76080e8}
+ -   7 :  : "<" {0xe7608670}
+ -   8 :  : ">" {0xe7608638}
+ -   9 :  : "> " {0xe7608600}
+ -  10 :  : "Cannot reflectively create enum objects" {0xe8ede9f0}
+ -  11 :  : "Parameter annotations don't match number of parameters" {0xe7608508}
+ -  12 :  : "\[\]$" {0xe76084c8}
+ -  13 :  : ' '
+ -  14 :  : ' throws '
+ -  15 :  : '('
+ -  16 :  : '()I'
+ -  17 :  : '()Ljava/lang/String;'
+ -  18 :  : '()V'
+ -  19 :  : '()Z'
+ -  20 :  : '()[B'
+ -  21 :  : '(I)Ljava/lang/String;'
+ -  22 :  : '(I)Z'
+ -  23 :  : '(Ljava/lang/Object;)Z'
+ -  24 :  : '(Ljava/lang/String;)Ljava/lang/StringBuffer;'
+ -  25 :  : '(Ljava/lang/String;)V'
+ -  26 :  : '([Ljava/lang/Object;)Ljava/lang/Object;'
+ -  27 :  : ')'
+ -  28 :  : ','
+ -  29 :  : '...'
+ -  30 :  : '<'
+ -  31 :  : '<init>'
+ -  32 :  : '>'
+ -  33 :  : '> '
+ -  34 :  : 'Cannot reflectively create enum objects'
+ -  35 :  : 'Code'
+ -  36 :  : 'Exceptions'
+ -  37 :  : 'I'
+ -  38 :  : 'Ljava/lang/Class;'
+ -  39 :  : 'Ljava/lang/String;'
+ -  40 :  : 'Parameter annotations don't match number of parameters'
+ -  41 :  : 'Signature'
+ -  42 :  : 'StackMapTable'
+ -  43 :  : 'Z'
+ -  44 :  : '[B'
+ -  45 :  : '[Ljava/lang/Class;'
+ -  46 :  : '[Ljava/lang/reflect/Type;'
+ -  47 :  : '[Ljava/lang/reflect/TypeVariable;'
+ -  48 :  : '[[Ljava/lang/annotation/Annotation;'
+ -  49 :  : '\[\]$'
+ -  50 :  : 'acquireConstructorAccessor'
+ -  51 :  : 'annotations'
+ -  52 :  : 'append'
+ -  53 :  : 'checkAccess'
+ -  54 :  : 'clazz'
+ -  55 :  : 'clone'
+ -  56 :  : 'constructorAccessor'
+ -  57 :  : 'constructorModifiers'
+ -  58 :  : 'copy'
+ -  59 :  : 'declaredAnnotations'
+ -  60 :  : 'equals'
+ -  61 :  : 'exceptionTypes'
+ -  62 :  : 'genericInfo'
+ -  63 :  : 'get'
+ -  64 :  : 'getAnnotation'
+ -  65 :  : 'getCallerClass'
+ -  66 :  : 'getConstantPool'
+ -  67 :  : 'getConstructorAccessor'
+ -  68 :  : 'getDeclaredAnnotations'
+ -  69 :  : 'getDeclaringClass'
+ -  70 :  : 'getExceptionTypes'
+ -  71 :  : 'getFactory'
+ -  72 :  : 'getGenericExceptionTypes'
+ -  73 :  : 'getGenericInfo'
+ -  74 :  : 'getGenericParameterTypes'
+ -  75 :  : 'getJavaLangAccess'
+ -  76 :  : 'getModifiers'
+ -  77 :  : 'getName'
+ -  78 :  : 'getParameterAnnotations'
+ -  79 :  : 'getParameterTypes'
+ -  80 :  : 'getRawAnnotations'
+ -  81 :  : 'getRawParameterAnnotations'
+ -  82 :  : 'getSignature'
+ -  83 :  : 'getSlot'
+ -  84 :  : 'getTypeName'
+ -  85 :  : 'getTypeParameters'
+ -  86 :  : 'hashCode'
+ -  87 :  : 'isAnonymousClass'
+ -  88 :  : 'isEnum'
+ -  89 :  : 'isLocalClass'
+ -  90 :  : 'isMemberClass'
+ -  91 :  : 'isSynthetic'
+ -  92 :  : 'isVarArgs'
+ -  93 :  : 'java/lang/Class'
+ -  94 :  : 'java/lang/Exception'
+ -  95 :  : 'java/lang/IllegalAccessException'
+ -  96 :  : 'java/lang/IllegalArgumentException'
+ -  97 :  : 'java/lang/InstantiationException'
+ -  98 :  : 'java/lang/NullPointerException'
+ -  99 :  : 'java/lang/Object'
+ - 100 :  : 'java/lang/String'
+ - 101 :  : 'java/lang/StringBuffer'
+ - 102 :  : 'java/lang/StringBuilder'
+ - 103 :  : 'java/lang/annotation/Annotation'
+ - 104 :  : 'java/lang/annotation/AnnotationFormatError'
+ - 105 :  : 'java/lang/reflect/AccessibleObject'
+ - 106 :  : 'java/lang/reflect/Constructor'
+ - 107 :  : 'java/lang/reflect/Field'
+ - 108 :  : 'java/lang/reflect/GenericDeclaration'
+ - 109 :  : 'java/lang/reflect/InvocationTargetException'
+ - 110 :  : 'java/lang/reflect/Member'
+ - 111 :  : 'java/lang/reflect/Modifier'
+ - 112 :  : 'java/lang/reflect/TypeVariable'
+ - 113 :  : 'java/util/Map'
+ - 114 :  : 'make'
+ - 115 :  : 'modifiers'
+ - 116 :  : 'newConstructorAccessor'
+ - 117 :  : 'newInstance'
+ - 118 :  : 'override'
+ - 119 :  : 'parameterAnnotations'
+ - 120 :  : 'parameterTypes'
+ - 121 :  : 'parseAnnotations'
+ - 122 :  : 'parseParameterAnnotations'
+ - 123 :  : 'quickCheckMemberAccess'
+ - 124 :  : 'reflectionFactory'
+ - 125 :  : 'replaceFirst'
+ - 126 :  : 'root'
+ - 127 :  : 'setConstructorAccessor'
+ - 128 :  : 'signature'
+ - 129 :  : 'slot'
+ - 130 :  : 'sun/misc/JavaLangAccess'
+ - 131 :  : 'sun/misc/SharedSecrets'
+ - 132 :  : 'sun/reflect/ConstructorAccessor'
+ - 133 :  : 'sun/reflect/Reflection'
+ - 134 :  : 'sun/reflect/ReflectionFactory'
+ - 135 :  : 'sun/reflect/annotation/AnnotationParser'
+ - 136 :  : 'sun/reflect/generics/factory/CoreReflectionFactory'
+ - 137 :  : 'sun/reflect/generics/repository/ConstructorRepository'
+ - 138 :  : 'sun/reflect/generics/scope/ConstructorScope'
+ - 139 :  : 'toArray'
+ - 140 :  : 'toGenericString'
+ - 141 :  : 'toString'
+ - 142 :  : 'java/lang/Class'[] {0xce0a4830}
+ - 143 :  : '[Ljava/lang/reflect/Type;'
+ - 144 :  : '[Ljava/lang/reflect/TypeVariable;'
+ - 145 :  : 'java/lang/annotation/Annotation'[][] {0xce3a76e0}
+ - 146 :  : 'java/lang/Class' {0xce015c38}
+ - 147 :  : 'java/lang/Exception'
+ - 148 :  : 'java/lang/IllegalAccessException'
+ - 149 :  : 'java/lang/IllegalArgumentException'
+ - 150 :  : 'java/lang/InstantiationException'
+ - 151 :  : 'java/lang/NullPointerException'
+ - 152 :  : 'java/lang/Object'
+ - 153 :  : 'java/lang/String'
+ - 154 :  : 'java/lang/StringBuffer'
+ - 155 :  : 'java/lang/StringBuilder'
+ - 156 :  : 'java/lang/annotation/Annotation'
+ - 157 :  : 'java/lang/annotation/AnnotationFormatError'
+ - 158 :  : 'java/lang/reflect/AccessibleObject' {0xce044fa0}
+ - 159 :  : 'java/lang/reflect/Constructor' {0xce04f3a8}
+ - 160 :  : 'java/lang/reflect/Field'
+ - 161 :  : 'java/lang/reflect/GenericDeclaration'
+ - 162 :  : 'java/lang/reflect/InvocationTargetException'
+ - 163 :  : 'java/lang/reflect/Member'
+ - 164 :  : 'java/lang/reflect/Modifier'
+ - 165 :  : 'java/lang/reflect/TypeVariable'
+ - 166 :  : 'java/util/Map'
+ - 167 :  : 'sun/misc/JavaLangAccess' {0xce1841f8}
+ - 168 :  : 'sun/misc/SharedSecrets' {0xce119a28}
+ - 169 :  : 'sun/reflect/ConstructorAccessor' {0xce0507a0}
+ - 170 :  : 'sun/reflect/Reflection' {0xce1034c0}
+ - 171 :  : 'sun/reflect/ReflectionFactory' {0xce0c59b0}
+ - 172 :  : 'sun/reflect/annotation/AnnotationParser' {0xce3a1c30}
+ - 173 :  : 'sun/reflect/generics/factory/CoreReflectionFactory'
+ - 174 :  : 'sun/reflect/generics/repository/ConstructorRepository'
+ - 175 :  : 'sun/reflect/generics/scope/ConstructorScope'
+ - 176 :  : 'Ljava/lang/Class<TT;>;'
+ - 177 :  : '[Ljava/lang/Class<*>;'
+ - 178 :  : 'Ljava/lang/reflect/Constructor;'
+ - 179 :  : 'Ljava/lang/reflect/Constructor<TT;>;'
+ - 180 :  : 'Ljava/util/Map;'
+ - 181 :  : 'Lsun/reflect/ConstructorAccessor;'
+ - 182 :  : 'Lsun/reflect/ReflectionFactory;'
+ - 183 :  : 'Lsun/reflect/generics/repository/ConstructorRepository;'
+ - 184 :  : '<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;'
+ - 185 :  : 'Ljava/util/Map<Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;Ljava/lang/annotation/Annotation;>;'
+ - 186 :  : '<T:Ljava/lang/Object;>Ljava/lang/reflect/AccessibleObject;Ljava/lang/reflect/GenericDeclaration;Ljava/lang/reflect/Member;'
+ - 187 :  : '()Ljava/lang/Class;'
+ - 188 :  : '()Ljava/lang/Class<TT;>;'
+ - 189 :  : '()[Ljava/lang/Class;'
+ - 190 :  : '()[Ljava/lang/Class<*>;'
+ - 191 :  : '(I)Ljava/lang/Class;'
+ - 192 :  : '(Ljava/lang/Class;I)Z'
+ - 193 :  : '()Ljava/lang/Object;'
+ - 194 :  : '([Ljava/lang/Object;)TT;'
+ - 195 :  : '()[Ljava/lang/annotation/Annotation;'
+ - 196 :  : '()[[Ljava/lang/annotation/Annotation;'
+ - 197 :  : '()Ljava/lang/reflect/Constructor;'
+ - 198 :  : '()Ljava/lang/reflect/Constructor<TT;>;'
+ - 199 :  : '()[Ljava/lang/reflect/Type;'
+ - 200 :  : '()[Ljava/lang/reflect/TypeVariable;'
+ - 201 :  : '()Ljava/util/Map;'
+ - 202 :  : '()Lsun/misc/JavaLangAccess;'
+ - 203 :  : '()Lsun/reflect/ConstructorAccessor;'
+ - 204 :  : '(Lsun/reflect/ConstructorAccessor;)V'
+ - 205 :  : '()Lsun/reflect/generics/factory/GenericsFactory;'
+ - 206 :  : '()Lsun/reflect/generics/repository/ConstructorRepository;'
+ - 207 :  : '(Ljava/lang/Object;)Ljava/lang/Object;'
+ - 208 :  : '(Ljava/lang/Class;)Ljava/lang/String;'
+ - 209 :  : '(Ljava/lang/Object;)Ljava/lang/StringBuilder;'
+ - 210 :  : '(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+ - 211 :  : '(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;'
+ - 212 :  : '(Ljava/util/Map;)[Ljava/lang/annotation/Annotation;'
+ - 213 :  : '()[Ljava/lang/reflect/TypeVariable<Ljava/lang/reflect/Constructor<TT;>;>;'
+ - 214 :  : '(Ljava/lang/Class;)Lsun/reflect/ConstantPool;'
+ - 215 :  : '(Ljava/lang/reflect/Constructor;)Lsun/reflect/ConstructorAccessor;'
+ - 216 :  : '(Ljava/lang/reflect/Constructor;)Lsun/reflect/generics/scope/ConstructorScope;'
+ - 217 :  : '(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;I)V'
+ - 218 :  : '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;'
+ - 219 :  : '([BLsun/reflect/ConstantPool;Ljava/lang/Class;)[[Ljava/lang/annotation/Annotation;'
+ - 220 :  : '([BLsun/reflect/ConstantPool;Ljava/lang/Class;)Ljava/util/Map;'
+ - 221 :  : '(Ljava/lang/reflect/GenericDeclaration;Lsun/reflect/generics/scope/Scope;)Lsun/reflect/generics/factory/CoreReflectionFactory;'
+ - 222 :  : '(Ljava/lang/String;Lsun/reflect/generics/factory/GenericsFactory;)Lsun/reflect/generics/repository/ConstructorRepository;'
+ - 223 :  : '(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Class;IILjava/lang/String;[B[B)V'
+ - 224 :  : '(Ljava/lang/Class<TT;>;[Ljava/lang/Class<*>;[Ljava/lang/Class<*>;IILjava/lang/String;[B[B)V'
+ - 225 :  : '()Ljava/util/Map<Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;Ljava/lang/annotation/Annotation;>;'
+ - 226 :  : name_index=115 signature_index=37
+ - 227 :  : name_index=129 signature_index=37
+ - 228 :  : name_index=118 signature_index=43
+ - 229 :  : name_index=51 signature_index=44
+ - 230 :  : name_index=119 signature_index=44
+ - 231 :  : name_index=54 signature_index=38
+ - 232 :  : name_index=61 signature_index=45
+ - 233 :  : name_index=120 signature_index=45
+ - 234 :  : name_index=128 signature_index=39
+ - 235 :  : name_index=126 signature_index=178
+ - 236 :  : name_index=59 signature_index=180
+ - 237 :  : name_index=56 signature_index=181
+ - 238 :  : name_index=124 signature_index=182
+ - 239 :  : name_index=62 signature_index=183
+ - 240 :  : name_index=57 signature_index=16
+ - 241 :  : name_index=76 signature_index=16
+ - 242 :  : name_index=86 signature_index=16
+ - 243 :  : name_index=31 signature_index=18
+ - 244 :  : name_index=87 signature_index=19
+ - 245 :  : name_index=88 signature_index=19
+ - 246 :  : name_index=89 signature_index=19
+ - 247 :  : name_index=90 signature_index=19
+ - 248 :  : name_index=92 signature_index=19
+ - 249 :  : name_index=91 signature_index=22
+ - 250 :  : name_index=69 signature_index=187
+ - 251 :  : name_index=70 signature_index=189
+ - 252 :  : name_index=79 signature_index=189
+ - 253 :  : name_index=65 signature_index=191
+ - 254 :  : name_index=123 signature_index=192
+ - 255 :  : name_index=55 signature_index=193
+ - 256 :  : name_index=77 signature_index=17
+ - 257 :  : name_index=82 signature_index=17
+ - 258 :  : name_index=141 signature_index=17
+ - 259 :  : name_index=141 signature_index=21
+ - 260 :  : name_index=31 signature_index=25
+ - 261 :  : name_index=70 signature_index=199
+ - 262 :  : name_index=72 signature_index=199
+ - 263 :  : name_index=74 signature_index=199
+ - 264 :  : name_index=79 signature_index=199
+ - 265 :  : name_index=85 signature_index=200
+ - 266 :  : name_index=59 signature_index=201
+ - 267 :  : name_index=75 signature_index=202
+ - 268 :  : name_index=50 signature_index=203
+ - 269 :  : name_index=67 signature_index=203
+ - 270 :  : name_index=127 signature_index=204
+ - 271 :  : name_index=71 signature_index=205
+ - 272 :  : name_index=73 signature_index=206
+ - 273 :  : name_index=63 signature_index=207
+ - 274 :  : name_index=117 signature_index=26
+ - 275 :  : name_index=84 signature_index=208
+ - 276 :  : name_index=52 signature_index=24
+ - 277 :  : name_index=52 signature_index=209
+ - 278 :  : name_index=52 signature_index=210
+ - 279 :  : name_index=139 signature_index=212
+ - 280 :  : name_index=66 signature_index=214
+ - 281 :  : name_index=116 signature_index=215
+ - 282 :  : name_index=114 signature_index=216
+ - 283 :  : name_index=53 signature_index=217
+ - 284 :  : name_index=125 signature_index=218
+ - 285 :  : name_index=122 signature_index=219
+ - 286 :  : name_index=121 signature_index=220
+ - 287 :  : name_index=114 signature_index=221
+ - 288 :  : name_index=114 signature_index=222
+ - 289 :  : name_index=31 signature_index=223
+ - 290 :  : klass_index=159 name_and_type_index=226
+ - 291 :  : klass_index=159 name_and_type_index=227
+ - 292 :  : klass_index=159 name_and_type_index=228
+ - 293 :  : klass_index=159 name_and_type_index=229
+ - 294 :  : klass_index=159 name_and_type_index=230
+ - 295 :  : klass_index=159 name_and_type_index=231
+ - 296 :  : klass_index=159 name_and_type_index=232
+ - 297 :  : klass_index=159 name_and_type_index=233
+ - 298 :  : klass_index=159 name_and_type_index=234
+ - 299 :  : klass_index=159 name_and_type_index=235
+ - 300 :  : klass_index=159 name_and_type_index=236
+ - 301 :  : klass_index=159 name_and_type_index=237
+ - 302 :  : klass_index=159 name_and_type_index=238
+ - 303 :  : klass_index=159 name_and_type_index=239
+ - 304 :  : klass_index=142 name_and_type_index=255
+ - 305 :  : klass_index=146 name_and_type_index=241
+ - 306 :  : klass_index=146 name_and_type_index=244
+ - 307 :  : klass_index=146 name_and_type_index=245
+ - 308 :  : klass_index=146 name_and_type_index=246
+ - 309 :  : klass_index=146 name_and_type_index=247
+ - 310 :  : klass_index=146 name_and_type_index=256
+ - 311 :  : klass_index=149 name_and_type_index=260
+ - 312 :  : klass_index=151 name_and_type_index=243
+ - 313 :  : klass_index=152 name_and_type_index=258
+ - 314 :  : klass_index=153 name_and_type_index=242
+ - 315 :  : klass_index=153 name_and_type_index=284
+ - 316 :  : klass_index=154 name_and_type_index=243
+ - 317 :  : klass_index=154 name_and_type_index=258
+ - 318 :  : klass_index=154 name_and_type_index=276
+ - 319 :  : klass_index=155 name_and_type_index=243
+ - 320 :  : klass_index=155 name_and_type_index=258
+ - 321 :  : klass_index=155 name_and_type_index=277
+ - 322 :  : klass_index=155 name_and_type_index=278
+ - 323 :  : klass_index=157 name_and_type_index=260
+ - 324 :  : klass_index=158 name_and_type_index=243
+ - 325 :  : klass_index=159 name_and_type_index=241
+ - 326 :  : klass_index=159 name_and_type_index=248
+ - 327 :  : klass_index=159 name_and_type_index=250
+ - 328 :  : klass_index=159 name_and_type_index=251
+ - 329 :  : klass_index=159 name_and_type_index=252
+ - 330 :  : klass_index=159 name_and_type_index=257
+ - 331 :  : klass_index=159 name_and_type_index=262
+ - 332 :  : klass_index=159 name_and_type_index=263
+ - 333 :  : klass_index=159 name_and_type_index=265
+ - 334 :  : klass_index=159 name_and_type_index=266
+ - 335 :  : klass_index=159 name_and_type_index=268
+ - 336 :  : klass_index=159 name_and_type_index=269
+ - 337 :  : klass_index=159 name_and_type_index=270
+ - 338 :  : klass_index=159 name_and_type_index=271
+ - 339 :  : klass_index=159 name_and_type_index=272
+ - 340 :  : klass_index=159 name_and_type_index=283
+ - 341 :  : klass_index=159 name_and_type_index=289
+ - 342 :  : klass_index=160 name_and_type_index=275
+ - 343 :  : klass_index=164 name_and_type_index=240
+ - 344 :  : klass_index=164 name_and_type_index=249
+ - 345 :  : klass_index=164 name_and_type_index=259
+ - 346 :  : klass_index=168 name_and_type_index=267
+ - 347 :  : klass_index=170 name_and_type_index=253
+ - 348 :  : klass_index=170 name_and_type_index=254
+ - 349 :  : klass_index=171 name_and_type_index=281
+ - 350 :  : klass_index=172 name_and_type_index=279
+ - 351 :  : klass_index=172 name_and_type_index=285
+ - 352 :  : klass_index=172 name_and_type_index=286
+ - 353 :  : klass_index=173 name_and_type_index=287
+ - 354 :  : klass_index=174 name_and_type_index=261
+ - 355 :  : klass_index=174 name_and_type_index=264
+ - 356 :  : klass_index=174 name_and_type_index=265
+ - 357 :  : klass_index=174 name_and_type_index=288
+ - 358 :  : klass_index=175 name_and_type_index=282
+ - 359 :  : klass_index=166 name_and_type_index=273
+ - 360 :  : klass_index=167 name_and_type_index=280
+ - 361 :  : klass_index=169 name_and_type_index=274
+
+R13=0x00000000e9b8b020 is an oop
+java.lang.reflect.Method 
+ - klass: 'java/lang/reflect/Method'
+R14=0x0000000001dd3fb0 is an unknown value
+R15=0x0000000000000012 is an unknown value
+
+
+Stack: [0x0000000005d80000,0x0000000005e80000],  sp=0x0000000005e7eef0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xa9fb5]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+VM_Operation (0x0000000001fcd2c0): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x0000000001c7d000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000008416000 JavaThread "PoolPulse" daemon [_thread_blocked, id=6088, stack(0x000000000fe80000,0x000000000ff80000)]
+  0x0000000008415000 JavaThread "BoneCP-pool-watch-thread-mauiiowareport" daemon [_thread_blocked, id=7488, stack(0x000000000fc80000,0x000000000fd80000)]
+  0x0000000008414800 JavaThread "BoneCP-max-alive-scheduler-mauiiowareport" daemon [_thread_blocked, id=7556, stack(0x000000000f8d0000,0x000000000f9d0000)]
+  0x0000000008413800 JavaThread "BoneCP-keep-alive-scheduler-mauiiowareport" daemon [_thread_blocked, id=3288, stack(0x000000000f9f0000,0x000000000faf0000)]
+  0x0000000008413000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6496, stack(0x000000000f2c0000,0x000000000f3c0000)]
+  0x0000000008412800 JavaThread "BoneCP-pool-watch-thread-mauidwprodrpt" daemon [_thread_blocked, id=2352, stack(0x000000000f7a0000,0x000000000f8a0000)]
+  0x0000000008411800 JavaThread "BoneCP-max-alive-scheduler-mauidwprodrpt" daemon [_thread_blocked, id=7852, stack(0x000000000f010000,0x000000000f110000)]
+  0x0000000008411000 JavaThread "BoneCP-keep-alive-scheduler-mauidwprodrpt" daemon [_thread_blocked, id=7044, stack(0x000000000cc80000,0x000000000cd80000)]
+  0x0000000008435000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=2752, stack(0x000000000f620000,0x000000000f720000)]
+  0x0000000008434000 JavaThread "BoneCP-pool-watch-thread-db2-queue" daemon [_thread_blocked, id=7448, stack(0x000000000f4f0000,0x000000000f5f0000)]
+  0x0000000008433800 JavaThread "BoneCP-max-alive-scheduler-db2-queue" daemon [_thread_blocked, id=7756, stack(0x000000000f3e0000,0x000000000f4e0000)]
+  0x0000000008432800 JavaThread "BoneCP-keep-alive-scheduler-db2-queue" daemon [_thread_blocked, id=4364, stack(0x000000000f180000,0x000000000f280000)]
+  0x0000000008432000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=8040, stack(0x000000000ef10000,0x000000000f010000)]
+  0x0000000008431000 JavaThread "BoneCP-pool-watch-thread-idw" daemon [_thread_blocked, id=6968, stack(0x000000000ed90000,0x000000000ee90000)]
+  0x0000000008430800 JavaThread "BoneCP-keep-alive-scheduler-idw" daemon [_thread_blocked, id=2104, stack(0x000000000ec10000,0x000000000ed10000)]
+  0x000000000842f800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6584, stack(0x000000000e980000,0x000000000ea80000)]
+  0x000000000842f000 JavaThread "BoneCP-pool-watch-thread-univid" daemon [_thread_blocked, id=1116, stack(0x000000000ea90000,0x000000000eb90000)]
+  0x000000000842e800 JavaThread "BoneCP-keep-alive-scheduler-univid" daemon [_thread_blocked, id=7316, stack(0x000000000d210000,0x000000000d310000)]
+  0x000000000842d800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=4008, stack(0x000000000e6e0000,0x000000000e7e0000)]
+  0x000000000842d000 JavaThread "BoneCP-pool-watch-thread-instructor" daemon [_thread_blocked, id=7924, stack(0x000000000e7f0000,0x000000000e8f0000)]
+  0x000000000842c000 JavaThread "BoneCP-keep-alive-scheduler-instructor" daemon [_thread_blocked, id=6888, stack(0x000000000e5c0000,0x000000000e6c0000)]
+  0x000000000842b800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6628, stack(0x000000000e200000,0x000000000e300000)]
+  0x000000000842a800 JavaThread "BoneCP-pool-watch-thread-reports" daemon [_thread_blocked, id=7596, stack(0x000000000e410000,0x000000000e510000)]
+  0x000000000842a000 JavaThread "BoneCP-keep-alive-scheduler-reports" daemon [_thread_blocked, id=6352, stack(0x000000000e310000,0x000000000e410000)]
+  0x0000000008429000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7300, stack(0x000000000e0f0000,0x000000000e1f0000)]
+  0x0000000008428800 JavaThread "BoneCP-pool-watch-thread-whouse" daemon [_thread_blocked, id=6020, stack(0x000000000df70000,0x000000000e070000)]
+  0x0000000008428000 JavaThread "BoneCP-keep-alive-scheduler-whouse" daemon [_thread_blocked, id=5464, stack(0x000000000de00000,0x000000000df00000)]
+  0x0000000008427000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=1136, stack(0x000000000d9e0000,0x000000000dae0000)]
+  0x0000000008426800 JavaThread "BoneCP-pool-watch-thread-nolij" daemon [_thread_blocked, id=2564, stack(0x000000000dca0000,0x000000000dda0000)]
+  0x0000000008425800 JavaThread "BoneCP-keep-alive-scheduler-nolij" daemon [_thread_blocked, id=5568, stack(0x000000000dae0000,0x000000000dbe0000)]
+  0x00000000083b8000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6520, stack(0x000000000c460000,0x000000000c560000)]
+  0x00000000083b7000 JavaThread "BoneCP-pool-watch-thread-mauiods" daemon [_thread_blocked, id=5572, stack(0x000000000d860000,0x000000000d960000)]
+  0x00000000083b6800 JavaThread "BoneCP-keep-alive-scheduler-mauiods" daemon [_thread_blocked, id=6764, stack(0x000000000d420000,0x000000000d520000)]
+  0x00000000083b6000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6428, stack(0x000000000d700000,0x000000000d800000)]
+  0x00000000083b5000 JavaThread "BoneCP-pool-watch-thread-mauidw" daemon [_thread_blocked, id=3872, stack(0x000000000d520000,0x000000000d620000)]
+  0x00000000083b4800 JavaThread "BoneCP-keep-alive-scheduler-mauidw" daemon [_thread_blocked, id=4532, stack(0x000000000d320000,0x000000000d420000)]
+  0x00000000083b3800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7092, stack(0x000000000d100000,0x000000000d200000)]
+  0x00000000083b3000 JavaThread "BoneCP-pool-watch-thread-isis" daemon [_thread_blocked, id=7684, stack(0x000000000cf70000,0x000000000d070000)]
+  0x00000000083b2000 JavaThread "BoneCP-keep-alive-scheduler-isis" daemon [_thread_blocked, id=7252, stack(0x000000000cd80000,0x000000000ce80000)]
+  0x00000000083b1800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=1032, stack(0x000000000c830000,0x000000000c930000)]
+  0x00000000083b0800 JavaThread "BoneCP-pool-watch-thread-hprod" daemon [_thread_blocked, id=7508, stack(0x000000000ca80000,0x000000000cb80000)]
+  0x00000000083b0000 JavaThread "BoneCP-keep-alive-scheduler-hprod" daemon [_thread_blocked, id=7688, stack(0x000000000cb80000,0x000000000cc80000)]
+  0x00000000083af800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=4512, stack(0x000000000c930000,0x000000000ca30000)]
+  0x00000000083ae800 JavaThread "BoneCP-pool-watch-thread-uachieve" daemon [_thread_blocked, id=1200, stack(0x000000000c6e0000,0x000000000c7e0000)]
+  0x00000000083ae000 JavaThread "BoneCP-max-alive-scheduler-uachieve" daemon [_thread_blocked, id=7844, stack(0x000000000be60000,0x000000000bf60000)]
+  0x00000000083ad000 JavaThread "BoneCP-keep-alive-scheduler-uachieve" daemon [_thread_blocked, id=7188, stack(0x000000000c570000,0x000000000c670000)]
+  0x00000000083ac800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7912, stack(0x000000000c340000,0x000000000c440000)]
+  0x00000000083ab800 JavaThread "BoneCP-pool-watch-thread-profile" daemon [_thread_blocked, id=6104, stack(0x000000000c210000,0x000000000c310000)]
+  0x00000000083ab000 JavaThread "BoneCP-max-alive-scheduler-profile" daemon [_thread_blocked, id=8008, stack(0x000000000c0b0000,0x000000000c1b0000)]
+  0x00000000083aa000 JavaThread "BoneCP-keep-alive-scheduler-profile" daemon [_thread_blocked, id=7176, stack(0x000000000bfa0000,0x000000000c0a0000)]
+  0x00000000083a9800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6872, stack(0x000000000b950000,0x000000000ba50000)]
+  0x00000000083a8800 JavaThread "BoneCP-pool-watch-thread-dwprod" daemon [_thread_blocked, id=2680, stack(0x000000000bd50000,0x000000000be50000)]
+  0x0000000007aea800 JavaThread "BoneCP-max-alive-scheduler-dwprod" daemon [_thread_blocked, id=7268, stack(0x000000000bc20000,0x000000000bd20000)]
+  0x0000000007ae9800 JavaThread "BoneCP-keep-alive-scheduler-dwprod" daemon [_thread_blocked, id=4064, stack(0x000000000ba60000,0x000000000bb60000)]
+  0x0000000007ae9000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7936, stack(0x000000000b230000,0x000000000b330000)]
+  0x0000000007ae8800 JavaThread "BoneCP-pool-watch-thread-mauibill" daemon [_thread_blocked, id=5496, stack(0x000000000b770000,0x000000000b870000)]
+  0x0000000007ae7800 JavaThread "BoneCP-keep-alive-scheduler-mauibill" daemon [_thread_blocked, id=6844, stack(0x000000000b5b0000,0x000000000b6b0000)]
+  0x0000000007ae7000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7148, stack(0x000000000b410000,0x000000000b510000)]
+  0x0000000007ae6000 JavaThread "BoneCP-pool-watch-thread-maui" daemon [_thread_blocked, id=2600, stack(0x000000000b130000,0x000000000b230000)]
+  0x0000000007ae5800 JavaThread "BoneCP-max-alive-scheduler-maui" daemon [_thread_blocked, id=5596, stack(0x000000000afd0000,0x000000000b0d0000)]
+  0x0000000007ae4800 JavaThread "BoneCP-keep-alive-scheduler-maui" daemon [_thread_blocked, id=4564, stack(0x000000000ae20000,0x000000000af20000)]
+  0x0000000007ae4000 JavaThread "BoneCP-pool-watch-thread-maui" daemon [_thread_blocked, id=6148, stack(0x000000000ac70000,0x000000000ad70000)]
+  0x0000000007ae3000 JavaThread "BoneCP-max-alive-scheduler-maui" daemon [_thread_blocked, id=4664, stack(0x000000000ab10000,0x000000000ac10000)]
+  0x0000000007ae2800 JavaThread "BoneCP-keep-alive-scheduler-maui" daemon [_thread_blocked, id=7004, stack(0x000000000a9f0000,0x000000000aaf0000)]
+  0x0000000007ae2000 JavaThread "BoneCP-pool-watch-thread-maui" daemon [_thread_blocked, id=7648, stack(0x000000000a8b0000,0x000000000a9b0000)]
+  0x0000000007ae1000 JavaThread "BoneCP-max-alive-scheduler-maui" daemon [_thread_blocked, id=5960, stack(0x000000000a590000,0x000000000a690000)]
+  0x0000000007ae0800 JavaThread "BoneCP-keep-alive-scheduler-maui" daemon [_thread_blocked, id=1260, stack(0x000000000a700000,0x000000000a800000)]
+  0x0000000007adf800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=5828, stack(0x000000000a420000,0x000000000a520000)]
+  0x0000000007adf000 JavaThread "BoneCP-pool-watch-thread-db2TESTMARS" daemon [_thread_blocked, id=3664, stack(0x000000000a230000,0x000000000a330000)]
+  0x0000000007ade000 JavaThread "BoneCP-max-alive-scheduler-db2TESTMARS" daemon [_thread_blocked, id=4480, stack(0x000000000a100000,0x000000000a200000)]
+  0x0000000007add800 JavaThread "BoneCP-keep-alive-scheduler-db2TESTMARS" daemon [_thread_blocked, id=7784, stack(0x0000000009e90000,0x0000000009f90000)]
+  0x0000000007adc800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6848, stack(0x0000000009650000,0x0000000009750000)]
+  0x0000000007adc000 JavaThread "BoneCP-pool-watch-thread-db2PRODMARS" daemon [_thread_blocked, id=4560, stack(0x0000000009cc0000,0x0000000009dc0000)]
+  0x0000000007adb000 JavaThread "BoneCP-max-alive-scheduler-db2PRODMARS" daemon [_thread_blocked, id=5748, stack(0x0000000009900000,0x0000000009a00000)]
+  0x000000000592e000 JavaThread "BoneCP-keep-alive-scheduler-db2PRODMARS" daemon [_thread_blocked, id=8108, stack(0x0000000009b20000,0x0000000009c20000)]
+  0x00000000079aa800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7112, stack(0x0000000009a20000,0x0000000009b20000)]
+  0x0000000007529000 JavaThread "BoneCP-pool-watch-thread-db2ITCH" daemon [_thread_blocked, id=5964, stack(0x0000000008dd0000,0x0000000008ed0000)]
+  0x0000000007b4d000 JavaThread "BoneCP-max-alive-scheduler-db2ITCH" daemon [_thread_blocked, id=5952, stack(0x00000000097e0000,0x00000000098e0000)]
+  0x0000000007c52000 JavaThread "BoneCP-keep-alive-scheduler-db2ITCH" daemon [_thread_blocked, id=5624, stack(0x0000000009550000,0x0000000009650000)]
+  0x0000000007267000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=5208, stack(0x00000000093f0000,0x00000000094f0000)]
+  0x0000000007daa800 JavaThread "BoneCP-pool-watch-thread-db2" daemon [_thread_blocked, id=5384, stack(0x0000000008fd0000,0x00000000090d0000)]
+  0x0000000007625000 JavaThread "BoneCP-max-alive-scheduler-db2" daemon [_thread_blocked, id=2440, stack(0x0000000009280000,0x0000000009380000)]
+  0x0000000007b00000 JavaThread "BoneCP-keep-alive-scheduler-db2" daemon [_thread_blocked, id=8164, stack(0x0000000009130000,0x0000000009230000)]
+  0x0000000007a4a000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=5504, stack(0x0000000008ed0000,0x0000000008fd0000)]
+  0x0000000005871800 JavaThread "Service Thread" daemon [_thread_blocked, id=6552, stack(0x0000000006200000,0x0000000006300000)]
+  0x0000000005864800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6996, stack(0x0000000006df0000,0x0000000006ef0000)]
+  0x0000000005862800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=5776, stack(0x0000000006cf0000,0x0000000006df0000)]
+  0x0000000005856000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=6688, stack(0x0000000006b90000,0x0000000006c90000)]
+  0x000000000584e800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=2152, stack(0x00000000069a0000,0x0000000006aa0000)]
+  0x0000000005840800 JavaThread "Attach Listener" daemon [_thread_blocked, id=2408, stack(0x0000000006320000,0x0000000006420000)]
+  0x000000000583f800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4256, stack(0x00000000060f0000,0x00000000061f0000)]
+  0x00000000057b7000 JavaThread "Finalizer" daemon [_thread_blocked, id=5820, stack(0x0000000005c70000,0x0000000005d70000)]
+  0x00000000057b0800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7472, stack(0x0000000005ee0000,0x0000000005fe0000)]
+  0x0000000001c7d000 JavaThread "main" [_thread_blocked, id=248, stack(0x0000000001ed0000,0x0000000001fd0000)]
+
+Other Threads:
+=>0x00000000057a7800 VMThread [stack: 0x0000000005d80000,0x0000000005e80000] [id=5540]
+  0x000000000587d000 WatcherThread [stack: 0x0000000006f60000,0x0000000007060000] [id=7356]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000001c7a4c0] Threads_lock - owner thread: 0x00000000057a7800
+[0x0000000001c7a9c0] Heap_lock - owner thread: 0x0000000001c7d000
+
+Heap
+ PSYoungGen      total 120064K, used 6599K [0x00000000f7ab0000, 0x00000000fff10000, 0x0000000100000000)
+  eden space 105472K, 0% used [0x00000000f7ab0000,0x00000000f7ab0000,0x00000000fe1b0000)
+  from space 14592K, 45% used [0x00000000fe1b0000,0x00000000fe821d50,0x00000000feff0000)
+  to   space 13952K, 0% used [0x00000000ff170000,0x00000000ff170000,0x00000000fff10000)
+ PSOldGen        total 131712K, used 122191K [0x00000000e7000000, 0x00000000ef0a0000, 0x00000000f7ab0000)
+  object space 131712K, 92% used [0x00000000e7000000,0x00000000ee753f88,0x00000000ef0a0000)
+ PSPermGen       total 148608K, used 100072K [0x00000000ce000000, 0x00000000d7120000, 0x00000000e7000000)
+  object space 148608K, 67% used [0x00000000ce000000,0x00000000d41ba148,0x00000000d7120000)
+
+Code Cache  [0x0000000002080000, 0x0000000002590000, 0x0000000005080000)
+ total_blobs=1794 nmethods=1345 adapters=407 free_code_cache=44288Kb largest_free_block=45031936
+
+Dynamic libraries:
+0x000000013feb0000 - 0x000000013fee3000 	C:\Windows\system32\java.exe
+0x0000000077830000 - 0x00000000779dc000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077150000 - 0x000000007726f000 	C:\Windows\system32\kernel32.dll
+0x000007fefdd50000 - 0x000007fefddbc000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefe120000 - 0x000007fefe1fb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff690000 - 0x000007feff72f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe100000 - 0x000007fefe11f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff990000 - 0x000007feffabe000 	C:\Windows\system32\RPCRT4.dll
+0x00000000773d0000 - 0x00000000774ca000 	C:\Windows\system32\USER32.dll
+0x000007fefe070000 - 0x000007fefe0d7000 	C:\Windows\system32\GDI32.dll
+0x000007feff680000 - 0x000007feff68e000 	C:\Windows\system32\LPK.dll
+0x000007fefe670000 - 0x000007fefe73a000 	C:\Windows\system32\USP10.dll
+0x000007fefc3c0000 - 0x000007fefc5b4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_fa62ad231704eab7\COMCTL32.dll
+0x000007feffac0000 - 0x000007feffb31000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe740000 - 0x000007fefe76e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe3f0000 - 0x000007fefe4f9000 	C:\Windows\system32\MSCTF.dll
+0x000000005ad40000 - 0x000000005ae11000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x000000006cf50000 - 0x000000006d61e000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fef9d50000 - 0x000007fef9d59000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe500000 - 0x000007fefe54d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe200000 - 0x000007fefe208000 	C:\Windows\system32\NSI.dll
+0x000007fefad60000 - 0x000007fefad9b000 	C:\Windows\system32\WINMM.dll
+0x0000000077a00000 - 0x0000000077a07000 	C:\Windows\system32\PSAPI.DLL
+0x0000000071cc0000 - 0x0000000071ccf000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x000000006a390000 - 0x000000006a3b8000 	C:\Program Files\Java\jre7\bin\java.dll
+0x000000005f970000 - 0x000000005f9a5000 	C:\Program Files\Java\jre7\bin\jdwp.dll
+0x0000000071cd0000 - 0x0000000071cd8000 	C:\Program Files\Java\jre7\bin\npt.dll
+0x000000006a6d0000 - 0x000000006a6e5000 	C:\Program Files\Java\jre7\bin\zip.dll
+0x0000000070310000 - 0x0000000070319000 	C:\Program Files\Java\jre7\bin\dt_socket.dll
+0x000007fefd4f0000 - 0x000007fefd544000 	C:\Windows\system32\mswsock.dll
+0x000007fefcf90000 - 0x000007fefcf97000 	C:\Windows\System32\wshtcpip.dll
+0x000000006a3d0000 - 0x000000006a3e9000 	C:\Program Files\Java\jre7\bin\net.dll
+0x000007fefd4e0000 - 0x000007fefd4e7000 	C:\Windows\System32\wship6.dll
+0x000000005cc20000 - 0x000000005cc31000 	C:\Program Files\Java\jre7\bin\nio.dll
+0x000000006fcc0000 - 0x000000006fccb000 	C:\Program Files\Java\jre7\bin\management.dll
+0x000000005cbf0000 - 0x000000005cc14000 	C:\Program Files\Java\jre7\bin\sunec.dll
+0x000007fefb5b0000 - 0x000007fefb5c5000 	C:\Windows\system32\NLAapi.dll
+0x000007fefd370000 - 0x000007fefd3cb000 	C:\Windows\system32\DNSAPI.dll
+0x000007fefa220000 - 0x000007fefa22b000 	C:\Windows\System32\winrnr.dll
+0x000007fefa200000 - 0x000007fefa215000 	C:\Windows\system32\napinsp.dll
+0x000007fefa1e0000 - 0x000007fefa1f9000 	C:\Windows\system32\pnrpnsp.dll
+0x00000000749c0000 - 0x00000000749e6000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x000007fefa950000 - 0x000007fefa977000 	C:\Windows\system32\Iphlpapi.DLL
+0x000007fefa940000 - 0x000007fefa94b000 	C:\Windows\system32\WINNSI.DLL
+0x000007fefa240000 - 0x000007fefa248000 	C:\Windows\system32\rasadhlp.dll
+0x000007fefa6d0000 - 0x000007fefa723000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fefd550000 - 0x000007fefd567000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefd250000 - 0x000007fefd297000 	C:\Windows\system32\rsaenh.dll
+0x000007fefd010000 - 0x000007fefd02e000 	C:\Windows\system32\USERENV.dll
+0x000007fefdca0000 - 0x000007fefdcaf000 	C:\Windows\system32\profapi.dll
+0x000007fefdbd0000 - 0x000007fefdbdf000 	C:\Windows\system32\CRYPTBASE.dll
+0x000007fefb1d0000 - 0x000007fefb2f5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx400m -XX:MaxPermSize=400m -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -DMAUI_ROOT=C:\Projects\maui -DSYSTEM=DEV -Djava.compiler=NONE -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -Dcatalina.home=C:\tomcat-5.5.29 -Dcatalina.base=C:\Projects\maui\tomcat 
+java_command: C:\tomcat-5.5.29\bin\bootstrap.jar start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\jdk1.6
+CLASSPATH=.;C:\DBConnectors\ojdbc6.jar;C:\DBConnectors\mysql-connector-java-5.0.8-bin.jar;C:\DBConnectors\sqljdbc4.jar;C:\Program Files (x86)\Java\jre7\lib\ext\QTJava.zip
+PATH=C:\Program Files (x86)\ActiveState Komodo Edit 7\;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\java:\jdk1.6\jre\bin\javaw.exe;C:\jdk1.6\jre\bin\javaw.exe;C:\jdk1.6\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\grails\bin;C:\groovy\bin;C:\strawberry\bin;C:\apache-ant-1.8.2\bin;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;C:\apache-maven-3.0.4\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Users\rhmiller\Downloads\instantclient_11_2\;C:\DBConnectors;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\ruby-1.9.2\bin;C:\Program Files (x86)\git\bin;C:\Program Files (x86)\git\cmd
+USERNAME=rhmiller
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7600 
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1
+
+Memory: 4k page, physical 8255072k(2959720k free), swap 16508236k(10880416k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Mon Feb 18 08:40:06 2013
+elapsed time: 43 seconds
+

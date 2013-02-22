@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="helloStripes" default="build">
+    <property name="project.output.dir" value="web/WEB-INF/classes"/>
+
+    <path id="project.classpath">
+        <fileset dir="web/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="tomcat/common/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="project.classes">
+        <pathelement path="${project.output.dir}"/>
+    </path>
+
+    <path id="build.classpath">
+        <path refid="project.classpath"/>
+        <path refid="project.classes"/>
+    </path>
+
+    <target name="build" description="build" depends="clean">
+        <antcall target="timestamp">
+            <param name="message" value="Build Start Timestamp:"/>
+        </antcall>
+        <mkdir dir="${project.output.dir}"/>
+        <javac destdir="${project.output.dir}" debug="true" srcdir="src">
+                <classpath refid="build.classpath"/>
+        </javac>
+        <copy todir="${project.output.dir}">
+            <fileset dir="src">
+
+                <type type="file"/>
+            </fileset>
+        </copy>
+        <antcall target="timestamp">
+            <param name="message" value="Build End Timestamp:"/>
+        </antcall>
+    </target>
+
+    <target name="clean" description="clean">
+        <antcall target="timestamp">
+            <param name="message" value="Clean Start Timestamp:"/>
+        </antcall>
+        <delete dir="${project.output.dir}"/>
+        <delete dir="web/WEB-INF/src"/>
+        <antcall target="timestamp">
+            <param name="message" value="Clean End Timestamp:"/>
+        </antcall>
+    </target>
+
+    <target name="timestamp">
+        <tstamp>
+            <format property="current.time" pattern="MM/dd/yyyy hh:mm:ss aa zzz"/>
+        </tstamp>
+        <echo message="${message} ${current.time}"/>
+    </target>
+</project>

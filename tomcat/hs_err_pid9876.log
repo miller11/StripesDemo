@@ -1,0 +1,292 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000057419fb5, pid=9876, tid=7816
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0xa9fb5]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000005c97800):  VMThread [stack: 0x0000000006200000,0x0000000006300000] [id=7816]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000ca3845b8
+
+Registers:
+RAX=0x00000000ca3845b8, RBX=0x00000000ca3845b8, RCX=0x0000000000000000, RDX=0x0000000000000005
+RSP=0x00000000062ff150, RBP=0x0000000000000080, RSI=0x0000000000000080, RDI=0x00000000ea380178
+R8 =0x0000000000000005, R9 =0x000000000000000c, R10=0x0000000000000000, R11=0x0000000008024080
+R12=0x00000000ea37ff68, R13=0x00000000022ee560, R14=0x00000000021e3dc0, R15=0x0000000000000012
+RIP=0x0000000057419fb5, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x00000000062ff150)
+0x00000000062ff150:   00000000ea387194 0000000057433263
+0x00000000062ff160:   0000000000000003 00000000ce86db08
+0x00000000062ff170:   00000000ea380178 000000005745525c
+0x00000000062ff180:   0000000000000003 00000000ea38003c
+0x00000000062ff190:   00000000021e3410 00000000021e34a0
+0x00000000062ff1a0:   00000000021e3410 000000005756bafa
+0x00000000062ff1b0:   00000000ea37ff68 0000000000000000
+0x00000000062ff1c0:   00000000021e34a0 0000000012f234d0
+0x00000000062ff1d0:   00000000579a1c60 00000000576a4893
+0x00000000062ff1e0:   00000000021e34a0 0000000000000000
+0x00000000062ff1f0:   00000000062ff370 00000000579a1c60
+0x00000000062ff200:   00000000021dfe50 00000000576afe7e
+0x00000000062ff210:   000000005784ca90 00000000002f1100
+0x00000000062ff220:   00000000579a1c60 0000000000000001
+0x00000000062ff230:   0000000002010100 0000000000000000
+0x00000000062ff240:   000000000796d910 00000000021e3d00 
+
+Instructions: (pc=0x0000000057419fb5)
+0x0000000057419f95:   01 85 c0 0f 84 92 00 00 00 8b 0d 84 f1 56 00 48
+0x0000000057419fa5:   89 5c 24 38 8b d8 48 d3 e3 48 03 1d 6b f1 56 00
+0x0000000057419fb5:   48 8b 03 24 03 3c 03 74 6d 48 89 7c 24 20 48 8b
+0x0000000057419fc5:   3b 48 c7 44 24 30 03 00 00 00 48 8b 44 24 30 48 
+
+
+Register to memory mapping:
+
+RAX=0x00000000ca3845b8 is an unknown value
+RBX=0x00000000ca3845b8 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000005 is an unknown value
+RSP=0x00000000062ff150 is an unknown value
+RBP=0x0000000000000080 is an unknown value
+RSI=0x0000000000000080 is an unknown value
+RDI=0x00000000ea380178 is an oop
+net.sf.ehcache.store.chm.SelectableConcurrentHashMap$MemoryStoreSegment 
+ - klass: 'net/sf/ehcache/store/chm/SelectableConcurrentHashMap$MemoryStoreSegment'
+R8 =0x0000000000000005 is an unknown value
+R9 =0x000000000000000c is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000008024080 is an unknown value
+R12=0x00000000ea37ff68 is an oop
+[Lnet.sf.ehcache.store.chm.ConcurrentHashMap$Segment; 
+ - klass: 'net/sf/ehcache/store/chm/ConcurrentHashMap$Segment'[]
+ - length: 128
+R13=0x00000000022ee560 is an unknown value
+R14=0x00000000021e3dc0 is an unknown value
+R15=0x0000000000000012 is an unknown value
+
+
+Stack: [0x0000000006200000,0x0000000006300000],  sp=0x00000000062ff150,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xa9fb5]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+VM_Operation (0x00000000026ad420): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x00000000022ed000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000008334800 JavaThread "Keep-Alive-Timer" daemon [_thread_blocked, id=6452, stack(0x0000000010f30000,0x0000000011030000)]
+  0x0000000008333800 JavaThread "uiowa.maui.biz.session.SessionQueryCache.data" [_thread_blocked, id=5060, stack(0x0000000014790000,0x0000000014890000)]
+  0x0000000008332800 JavaThread "org.hibernate.cache.StandardQueryCache.data" [_thread_blocked, id=8988, stack(0x00000000124d0000,0x00000000125d0000)]
+  0x0000000008332000 JavaThread "uiowa.maui.biz.registrar.pgmstudy.cache.PgmStudyQueryCache.data" [_thread_blocked, id=10056, stack(0x0000000012360000,0x0000000012460000)]
+  0x0000000008330800 JavaThread "uiowa.maui.biz.registrar.courses.CourseGradeGroupQueryCache.data" [_thread_blocked, id=8304, stack(0x00000000121b0000,0x00000000122b0000)]
+  0x0000000008331000 JavaThread "maui" daemon [_thread_blocked, id=560, stack(0x0000000010730000,0x0000000010830000)]
+  0x000000000832f800 JavaThread "PoolPulse" daemon [_thread_blocked, id=3968, stack(0x0000000010530000,0x0000000010630000)]
+  0x000000000832f000 JavaThread "BoneCP-pool-watch-thread-mauidwprodrpt" daemon [_thread_blocked, id=9636, stack(0x0000000010b20000,0x0000000010c20000)]
+  0x000000000832e000 JavaThread "BoneCP-max-alive-scheduler-mauidwprodrpt" daemon [_thread_blocked, id=4296, stack(0x00000000109b0000,0x0000000010ab0000)]
+  0x000000000832d800 JavaThread "BoneCP-keep-alive-scheduler-mauidwprodrpt" daemon [_thread_blocked, id=5648, stack(0x00000000108a0000,0x00000000109a0000)]
+  0x000000000832d000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=3044, stack(0x0000000010630000,0x0000000010730000)]
+  0x000000000832c000 JavaThread "BoneCP-pool-watch-thread-db2-queue" daemon [_thread_blocked, id=6324, stack(0x000000000fda0000,0x000000000fea0000)]
+  0x000000000832b800 JavaThread "BoneCP-max-alive-scheduler-db2-queue" daemon [_thread_blocked, id=9248, stack(0x00000000103e0000,0x00000000104e0000)]
+  0x000000000832a800 JavaThread "BoneCP-keep-alive-scheduler-db2-queue" daemon [_thread_blocked, id=4940, stack(0x00000000102a0000,0x00000000103a0000)]
+  0x000000000832a000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=5424, stack(0x0000000010190000,0x0000000010290000)]
+  0x0000000008329000 JavaThread "BoneCP-pool-watch-thread-idw" daemon [_thread_blocked, id=6508, stack(0x0000000010000000,0x0000000010100000)]
+  0x0000000008328800 JavaThread "BoneCP-keep-alive-scheduler-idw" daemon [_thread_blocked, id=5776, stack(0x000000000fec0000,0x000000000ffc0000)]
+  0x0000000008327800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=5804, stack(0x000000000f990000,0x000000000fa90000)]
+  0x0000000008327000 JavaThread "BoneCP-pool-watch-thread-univid" daemon [_thread_blocked, id=8856, stack(0x000000000fc60000,0x000000000fd60000)]
+  0x0000000008326800 JavaThread "BoneCP-keep-alive-scheduler-univid" daemon [_thread_blocked, id=2588, stack(0x000000000faa0000,0x000000000fba0000)]
+  0x0000000007b97800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=9800, stack(0x000000000f820000,0x000000000f920000)]
+  0x0000000007b96800 JavaThread "BoneCP-pool-watch-thread-instructor" daemon [_thread_blocked, id=1268, stack(0x000000000f1f0000,0x000000000f2f0000)]
+  0x0000000007b96000 JavaThread "BoneCP-keep-alive-scheduler-instructor" daemon [_thread_blocked, id=8376, stack(0x000000000f690000,0x000000000f790000)]
+  0x0000000007b95000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=9900, stack(0x000000000f530000,0x000000000f630000)]
+  0x0000000007b94800 JavaThread "BoneCP-pool-watch-thread-reports" daemon [_thread_blocked, id=9320, stack(0x000000000f340000,0x000000000f440000)]
+  0x0000000007b94000 JavaThread "BoneCP-keep-alive-scheduler-reports" daemon [_thread_blocked, id=5088, stack(0x000000000f0d0000,0x000000000f1d0000)]
+  0x0000000007b93000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=5580, stack(0x000000000eed0000,0x000000000efd0000)]
+  0x0000000007b92800 JavaThread "BoneCP-pool-watch-thread-whouse" daemon [_thread_blocked, id=5868, stack(0x000000000ecd0000,0x000000000edd0000)]
+  0x0000000007b91800 JavaThread "BoneCP-keep-alive-scheduler-whouse" daemon [_thread_blocked, id=8428, stack(0x000000000edd0000,0x000000000eed0000)]
+  0x0000000007b91000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6684, stack(0x000000000eb20000,0x000000000ec20000)]
+  0x0000000007b90000 JavaThread "BoneCP-pool-watch-thread-nolij" daemon [_thread_blocked, id=5324, stack(0x000000000e5d0000,0x000000000e6d0000)]
+  0x0000000007b8f800 JavaThread "BoneCP-keep-alive-scheduler-nolij" daemon [_thread_blocked, id=8992, stack(0x000000000e960000,0x000000000ea60000)]
+  0x0000000007b8e800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6104, stack(0x000000000e770000,0x000000000e870000)]
+  0x0000000007b8e000 JavaThread "BoneCP-pool-watch-thread-mauiods" daemon [_thread_blocked, id=9132, stack(0x000000000e4d0000,0x000000000e5d0000)]
+  0x0000000007b8d800 JavaThread "BoneCP-keep-alive-scheduler-mauiods" daemon [_thread_blocked, id=3652, stack(0x000000000dcc0000,0x000000000ddc0000)]
+  0x0000000007b8c800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=10028, stack(0x000000000e310000,0x000000000e410000)]
+  0x0000000007b8c000 JavaThread "BoneCP-pool-watch-thread-mauidw" daemon [_thread_blocked, id=10108, stack(0x000000000e150000,0x000000000e250000)]
+  0x0000000007b8b000 JavaThread "BoneCP-keep-alive-scheduler-mauidw" daemon [_thread_blocked, id=6376, stack(0x000000000dfe0000,0x000000000e0e0000)]
+  0x0000000007b8a800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=10196, stack(0x000000000ded0000,0x000000000dfd0000)]
+  0x0000000007b89800 JavaThread "BoneCP-pool-watch-thread-isis" daemon [_thread_blocked, id=5332, stack(0x000000000ddd0000,0x000000000ded0000)]
+  0x0000000007b89000 JavaThread "BoneCP-keep-alive-scheduler-isis" daemon [_thread_blocked, id=4984, stack(0x000000000db20000,0x000000000dc20000)]
+  0x0000000007b88000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=9504, stack(0x000000000d9a0000,0x000000000daa0000)]
+  0x0000000007a22800 JavaThread "BoneCP-pool-watch-thread-hprod" daemon [_thread_blocked, id=6428, stack(0x000000000d810000,0x000000000d910000)]
+  0x0000000007a21800 JavaThread "BoneCP-keep-alive-scheduler-hprod" daemon [_thread_blocked, id=7748, stack(0x000000000d400000,0x000000000d500000)]
+  0x0000000007a21000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=8336, stack(0x000000000d6a0000,0x000000000d7a0000)]
+  0x0000000007a20000 JavaThread "BoneCP-pool-watch-thread-uachieve" daemon [_thread_blocked, id=8812, stack(0x000000000d080000,0x000000000d180000)]
+  0x0000000007a1f800 JavaThread "BoneCP-keep-alive-scheduler-uachieve" daemon [_thread_blocked, id=10120, stack(0x000000000d500000,0x000000000d600000)]
+  0x0000000007a1f000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=6048, stack(0x000000000d2a0000,0x000000000d3a0000)]
+  0x0000000007a1e000 JavaThread "BoneCP-pool-watch-thread-profile" daemon [_thread_blocked, id=6408, stack(0x000000000c830000,0x000000000c930000)]
+  0x0000000007a1d800 JavaThread "BoneCP-max-alive-scheduler-profile" daemon [_thread_blocked, id=4720, stack(0x000000000cbd0000,0x000000000ccd0000)]
+  0x0000000007a1c800 JavaThread "BoneCP-keep-alive-scheduler-profile" daemon [_thread_blocked, id=752, stack(0x000000000d180000,0x000000000d280000)]
+  0x0000000007a1c000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=9272, stack(0x000000000cf80000,0x000000000d080000)]
+  0x0000000007a1b000 JavaThread "BoneCP-pool-watch-thread-dwprod" daemon [_thread_blocked, id=7740, stack(0x000000000b0b0000,0x000000000b1b0000)]
+  0x0000000007a1a800 JavaThread "BoneCP-max-alive-scheduler-dwprod" daemon [_thread_blocked, id=1724, stack(0x000000000ce60000,0x000000000cf60000)]
+  0x0000000007a19800 JavaThread "BoneCP-keep-alive-scheduler-dwprod" daemon [_thread_blocked, id=9116, stack(0x000000000ccf0000,0x000000000cdf0000)]
+  0x0000000007a19000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7064, stack(0x000000000bdf0000,0x000000000bef0000)]
+  0x0000000007a18800 JavaThread "BoneCP-pool-watch-thread-mauibill" daemon [_thread_blocked, id=9964, stack(0x000000000ca80000,0x000000000cb80000)]
+  0x0000000007a17800 JavaThread "BoneCP-keep-alive-scheduler-mauibill" daemon [_thread_blocked, id=4200, stack(0x000000000c930000,0x000000000ca30000)]
+  0x0000000007a17000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=9268, stack(0x000000000c710000,0x000000000c810000)]
+  0x0000000007a16000 JavaThread "BoneCP-pool-watch-thread-maui" daemon [_thread_blocked, id=4836, stack(0x000000000c510000,0x000000000c610000)]
+  0x0000000007a15800 JavaThread "BoneCP-max-alive-scheduler-maui" daemon [_thread_blocked, id=4820, stack(0x000000000c390000,0x000000000c490000)]
+  0x0000000007a14800 JavaThread "BoneCP-keep-alive-scheduler-maui" daemon [_thread_blocked, id=4776, stack(0x000000000c1c0000,0x000000000c2c0000)]
+  0x0000000007a14000 JavaThread "BoneCP-pool-watch-thread-maui" daemon [_thread_blocked, id=6216, stack(0x000000000c050000,0x000000000c150000)]
+  0x0000000007a13000 JavaThread "BoneCP-max-alive-scheduler-maui" daemon [_thread_blocked, id=5680, stack(0x000000000bef0000,0x000000000bff0000)]
+  0x000000000772f800 JavaThread "BoneCP-keep-alive-scheduler-maui" daemon [_thread_blocked, id=4444, stack(0x000000000bc80000,0x000000000bd80000)]
+  0x000000000772e800 JavaThread "BoneCP-pool-watch-thread-maui" daemon [_thread_blocked, id=9500, stack(0x000000000bb70000,0x000000000bc70000)]
+  0x000000000772e000 JavaThread "BoneCP-max-alive-scheduler-maui" daemon [_thread_blocked, id=2784, stack(0x000000000ba40000,0x000000000bb40000)]
+  0x000000000772d000 JavaThread "BoneCP-keep-alive-scheduler-maui" daemon [_thread_blocked, id=7144, stack(0x000000000b440000,0x000000000b540000)]
+  0x000000000772c800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7780, stack(0x000000000b8f0000,0x000000000b9f0000)]
+  0x000000000772b800 JavaThread "BoneCP-pool-watch-thread-db2TESTMARS" daemon [_thread_blocked, id=5844, stack(0x000000000b760000,0x000000000b860000)]
+  0x000000000772b000 JavaThread "BoneCP-max-alive-scheduler-db2TESTMARS" daemon [_thread_blocked, id=9484, stack(0x000000000b5e0000,0x000000000b6e0000)]
+  0x000000000772a800 JavaThread "BoneCP-keep-alive-scheduler-db2TESTMARS" daemon [_thread_blocked, id=9648, stack(0x000000000b340000,0x000000000b440000)]
+  0x0000000007729800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=9052, stack(0x000000000acb0000,0x000000000adb0000)]
+  0x0000000007729000 JavaThread "BoneCP-pool-watch-thread-db2PRODMARS" daemon [_thread_blocked, id=8892, stack(0x000000000b1d0000,0x000000000b2d0000)]
+  0x0000000007728000 JavaThread "BoneCP-max-alive-scheduler-db2PRODMARS" daemon [_thread_blocked, id=7772, stack(0x000000000afa0000,0x000000000b0a0000)]
+  0x0000000007727800 JavaThread "BoneCP-keep-alive-scheduler-db2PRODMARS" daemon [_thread_blocked, id=3232, stack(0x000000000a360000,0x000000000a460000)]
+  0x0000000007726800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7016, stack(0x000000000a4e0000,0x000000000a5e0000)]
+  0x0000000007726000 JavaThread "BoneCP-pool-watch-thread-db2ITCH" daemon [_thread_blocked, id=8188, stack(0x000000000adc0000,0x000000000aec0000)]
+  0x0000000007725000 JavaThread "BoneCP-max-alive-scheduler-db2ITCH" daemon [_thread_blocked, id=9196, stack(0x0000000007020000,0x0000000007120000)]
+  0x0000000007724800 JavaThread "BoneCP-keep-alive-scheduler-db2ITCH" daemon [_thread_blocked, id=6088, stack(0x000000000aa80000,0x000000000ab80000)]
+  0x0000000007724000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=8784, stack(0x000000000ab90000,0x000000000ac90000)]
+  0x0000000007723000 JavaThread "BoneCP-pool-watch-thread-db2" daemon [_thread_blocked, id=6744, stack(0x000000000a900000,0x000000000aa00000)]
+  0x0000000007722800 JavaThread "BoneCP-max-alive-scheduler-db2" daemon [_thread_blocked, id=7372, stack(0x000000000a6d0000,0x000000000a7d0000)]
+  0x0000000007721800 JavaThread "BoneCP-keep-alive-scheduler-db2" daemon [_thread_blocked, id=5020, stack(0x000000000a800000,0x000000000a900000)]
+  0x0000000007721000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=2508, stack(0x0000000009f80000,0x000000000a080000)]
+  0x0000000005d65000 JavaThread "Service Thread" daemon [_thread_blocked, id=7644, stack(0x0000000007130000,0x0000000007230000)]
+  0x0000000005d54000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=7652, stack(0x0000000006f10000,0x0000000007010000)]
+  0x0000000005d52800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8700, stack(0x00000000065b0000,0x00000000066b0000)]
+  0x0000000005d46000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=2088, stack(0x0000000006cd0000,0x0000000006dd0000)]
+  0x0000000005d37000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=8684, stack(0x0000000006a80000,0x0000000006b80000)]
+  0x0000000005d30800 JavaThread "Attach Listener" daemon [_thread_blocked, id=7128, stack(0x00000000066b0000,0x00000000067b0000)]
+  0x0000000005d2f000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6608, stack(0x00000000064b0000,0x00000000065b0000)]
+  0x0000000005cac800 JavaThread "Finalizer" daemon [_thread_blocked, id=9056, stack(0x0000000006360000,0x0000000006460000)]
+  0x0000000005ca0800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7524, stack(0x0000000006090000,0x0000000006190000)]
+  0x00000000022ed000 JavaThread "main" [_thread_blocked, id=5760, stack(0x00000000025b0000,0x00000000026b0000)]
+
+Other Threads:
+=>0x0000000005c97800 VMThread [stack: 0x0000000006200000,0x0000000006300000] [id=7816]
+  0x0000000005d70000 WatcherThread [stack: 0x0000000006b90000,0x0000000006c90000] [id=9020]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000022ea310] Threads_lock - owner thread: 0x0000000005c97800
+[0x00000000022ea810] Heap_lock - owner thread: 0x00000000022ed000
+
+Heap
+ PSYoungGen      total 118208K, used 6553K [0x00000000f7ab0000, 0x00000000ffe30000, 0x0000000100000000)
+  eden space 102848K, 0% used [0x00000000f7ab0000,0x00000000f7ab0000,0x00000000fdf20000)
+  from space 15360K, 42% used [0x00000000fdf20000,0x00000000fe586760,0x00000000fee20000)
+  to   space 14784K, 0% used [0x00000000fefc0000,0x00000000fefc0000,0x00000000ffe30000)
+ PSOldGen        total 134144K, used 124342K [0x00000000e7000000, 0x00000000ef300000, 0x00000000f7ab0000)
+  object space 134144K, 92% used [0x00000000e7000000,0x00000000ee96d910,0x00000000ef300000)
+ PSPermGen       total 170176K, used 100284K [0x00000000ce000000, 0x00000000d8630000, 0x00000000e7000000)
+  object space 170176K, 58% used [0x00000000ce000000,0x00000000d41ef030,0x00000000d8630000)
+
+Code Cache  [0x00000000026b0000, 0x0000000002ba0000, 0x00000000056b0000)
+ total_blobs=1801 nmethods=1330 adapters=429 free_code_cache=44445Kb largest_free_block=45199104
+
+Dynamic libraries:
+0x000000013fea0000 - 0x000000013fed3000 	C:\Windows\system32\java.exe
+0x0000000077920000 - 0x0000000077acc000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000773a0000 - 0x00000000774bf000 	C:\Windows\system32\kernel32.dll
+0x000007fefe090000 - 0x000007fefe0fc000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff270000 - 0x000007feff34b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe160000 - 0x000007fefe1ff000 	C:\Windows\system32\msvcrt.dll
+0x000007feff640000 - 0x000007feff65f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff970000 - 0x000007feffa9e000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077820000 - 0x000000007791a000 	C:\Windows\system32\USER32.dll
+0x000007feff900000 - 0x000007feff967000 	C:\Windows\system32\GDI32.dll
+0x000007feff4b0000 - 0x000007feff4be000 	C:\Windows\system32\LPK.dll
+0x000007fefe3e0000 - 0x000007fefe4aa000 	C:\Windows\system32\USP10.dll
+0x000007fefc4b0000 - 0x000007fefc6a4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_fa62ad231704eab7\COMCTL32.dll
+0x000007feff5c0000 - 0x000007feff631000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff240000 - 0x000007feff26e000 	C:\Windows\system32\IMM32.DLL
+0x000007feff350000 - 0x000007feff459000 	C:\Windows\system32\MSCTF.dll
+0x0000000063450000 - 0x0000000063521000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x0000000057370000 - 0x0000000057a3e000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fefac60000 - 0x000007fefac69000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff460000 - 0x000007feff4ad000 	C:\Windows\system32\WS2_32.dll
+0x000007feff6e0000 - 0x000007feff6e8000 	C:\Windows\system32\NSI.dll
+0x000007fefbab0000 - 0x000007fefbaeb000 	C:\Windows\system32\WINMM.dll
+0x0000000077ae0000 - 0x0000000077ae7000 	C:\Windows\system32\PSAPI.DLL
+0x0000000073030000 - 0x000000007303f000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x0000000072b40000 - 0x0000000072b68000 	C:\Program Files\Java\jre7\bin\java.dll
+0x0000000072a10000 - 0x0000000072a45000 	C:\Program Files\Java\jre7\bin\jdwp.dll
+0x0000000073020000 - 0x0000000073028000 	C:\Program Files\Java\jre7\bin\npt.dll
+0x0000000072140000 - 0x0000000072155000 	C:\Program Files\Java\jre7\bin\zip.dll
+0x0000000072a00000 - 0x0000000072a09000 	C:\Program Files\Java\jre7\bin\dt_socket.dll
+0x000007fefd560000 - 0x000007fefd5b4000 	C:\Windows\system32\mswsock.dll
+0x000007fefcfc0000 - 0x000007fefcfc7000 	C:\Windows\System32\wshtcpip.dll
+0x0000000070df0000 - 0x0000000070e09000 	C:\Program Files\Java\jre7\bin\net.dll
+0x000007fefd720000 - 0x000007fefd727000 	C:\Windows\System32\wship6.dll
+0x00000000714b0000 - 0x00000000714c1000 	C:\Program Files\Java\jre7\bin\nio.dll
+0x0000000072940000 - 0x000000007294b000 	C:\Program Files\Java\jre7\bin\management.dll
+0x0000000070d80000 - 0x0000000070da4000 	C:\Program Files\Java\jre7\bin\sunec.dll
+0x000007fefb7f0000 - 0x000007fefb805000 	C:\Windows\system32\NLAapi.dll
+0x000007fefd3f0000 - 0x000007fefd44b000 	C:\Windows\system32\DNSAPI.dll
+0x000007fefa010000 - 0x000007fefa01b000 	C:\Windows\System32\winrnr.dll
+0x000007fef9ff0000 - 0x000007fefa005000 	C:\Windows\system32\napinsp.dll
+0x000007fef9fd0000 - 0x000007fef9fe9000 	C:\Windows\system32\pnrpnsp.dll
+0x00000000740e0000 - 0x0000000074106000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x000007fefabf0000 - 0x000007fefac17000 	C:\Windows\system32\Iphlpapi.DLL
+0x000007fefabe0000 - 0x000007fefabeb000 	C:\Windows\system32\WINNSI.DLL
+0x000007fefa030000 - 0x000007fefa038000 	C:\Windows\system32\rasadhlp.dll
+0x000007fefa750000 - 0x000007fefa7a3000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fefd600000 - 0x000007fefd617000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefd360000 - 0x000007fefd3a7000 	C:\Windows\system32\rsaenh.dll
+0x000007fefd0c0000 - 0x000007fefd0de000 	C:\Windows\system32\USERENV.dll
+0x000007fefdd90000 - 0x000007fefdd9f000 	C:\Windows\system32\profapi.dll
+0x000007fefdc80000 - 0x000007fefdc8f000 	C:\Windows\system32\CRYPTBASE.dll
+0x000007fefb4f0000 - 0x000007fefb615000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx400m -XX:MaxPermSize=400m -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -DMAUI_ROOT=C:\Projects\maui -DSYSTEM=DEV -Djava.compiler=NONE -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -Dcatalina.home=C:\tomcat-5.5.29 -Dcatalina.base=C:\Projects\maui\tomcat 
+java_command: C:\tomcat-5.5.29\bin\bootstrap.jar start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\jdk1.6
+CLASSPATH=.;C:\DBConnectors\ojdbc6.jar;C:\DBConnectors\mysql-connector-java-5.0.8-bin.jar;C:\DBConnectors\sqljdbc4.jar;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip
+PATH=C:\Program Files (x86)\ActiveState Komodo Edit 7\;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\java:\jdk1.6\jre\bin\javaw.exe;C:\jdk1.6\jre\bin\javaw.exe;C:\jdk1.6\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\grails\bin;C:\groovy\bin;C:\strawberry\bin;C:\apache-ant-1.8.2\bin;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\apache-maven-3.0.4\bin;C:\Program Files\jEdit
+USERNAME=rhmiller
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7600 
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1
+
+Memory: 4k page, physical 8255072k(2978576k free), swap 16508244k(11376348k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Thu Nov 29 08:44:47 2012
+elapsed time: 142 seconds
+

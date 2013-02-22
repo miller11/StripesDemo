@@ -1,0 +1,3 @@
+call ROOT.BAT
+
+java -XX:MaxPermSize=128M -Xmn400M -Xmx400M -DSYSTEM=DEV -DMAUI_ROOT=%MAUI_ROOT% -Xdebug -noverify -javaagent:%CATALINA_HOME%\common\lib\javarebel.jar -Xbootclasspath/a:%CATALINA_HOME%\common\lib\javarebel.jar -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -Dcatalina.home=%CATALINA_HOME% -Dcatalina.base=%MAUI_ROOT%\tomcat -jar %CATALINA_HOME%\bin\bootstrap.jar start 

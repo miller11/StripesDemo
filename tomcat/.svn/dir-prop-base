@@ -1,0 +1,7 @@
+K 10
+svn:ignore
+V 55
+local-tomcat-properties.sh
+local-tomcat-properties.bat
+
+END

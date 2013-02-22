@@ -3,5 +3,6 @@ StripesDemo
 
 This is the basic stripes app example.
 
-This example currently is used with tomcat set like this:
-C:\apache-tomcat-7.0.37
+This app runs now like isis or maui. You must have your JAVA_HOME set and CATALINA_HOME set to the current maui/isis version of tomcat.
+
+Must also set tomcat/root.bat.
